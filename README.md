@@ -93,4 +93,14 @@ $ ./continue_train.sh
 
 #### Evolution of the net
 
-In this [link](https://htmlpreview.github.io/?https://github.com/Wauro21/gan_trimap/blob/main/docs/index.html) it's possible to see the evolution of the net during the training epochs. An html page was generated to aid in the visualization. 
+In this [link](https://htmlpreview.github.io/?https://github.com/Wauro21/gan_trimap/blob/main/docs/index.html) it's possible to see the evolution of the net during the training epochs. An html page was generated to aid in the visualization.
+
+#### Utils: Upscaling
+
+As the network works with a rather small resolution, we provide a python script: [`upscaling.py`](upscaling/upscaling.py), that takes the original input image and scales the resulting trimap extracted from the net, to needed dimensions:
+
+I/O | Image |
+:----:|:-----:|
+Input | ![](upscaling/A1.png)
+Net trimap | ![](upscaling/A2.jpg)
+Upscaled | ![](upscaling/upscaled.png)
