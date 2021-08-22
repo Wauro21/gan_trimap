@@ -69,7 +69,7 @@ The results will be stored in the `pix2pixHD/results` folder
 To train the net with your own dataset, create two folders inside `pix2pixHD/datasets/w/` called `train_A` and `train_B`. Inside the first folder the input images are placed and in the second folder, the expected result for the input images. Files names should correspond between folders i.e.
 ```
 train_A/
-	0.png # A photo to extract a triamp from
+	0.png # A photo to extract a trimap from
 
 train_B/
 	0.png # The expected trimap
@@ -84,9 +84,13 @@ $ ./train.sh
 
 #### Continue training
 
-The steps are basically the same that for training, placed the dataset in the corresponding folders. To continue training called the following routine:
+The steps are basically the same that for training, place the dataset in the corresponding folders. To continue training called the following routine:
 ```
 $ ./continue_train.sh
 ```
 
 **Note:** For default this routine will continue training from the last epoch that is provided in the Drive Folder (200th epoch).
+
+#### Evolution of the net
+
+In this [link](https://htmlpreview.github.io/?https://github.com/Wauro21/gan_trimap/blob/main/docs/index.html) it's possible to see the evolution of the net during the training epochs. An html page was generated to aid in the visualization. 
