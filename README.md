@@ -42,7 +42,7 @@ __*Note:__ Even thought we tested and trained the network with a GPU of this cha
 
 - Search inside the cloned repository folder __pix2pixHD__, for the `train.py` file and replace it with the one found in this repository [here](train.py). This fixes some broken and old dependencies.
 
-- Download the weights for the trained model (G and D nets) from our [Drive folder](https://drive.google.com/drive/folders/161S-NxOAmuIfHN-Ol2osE6sYp45fZHUK?usp=sharing). After download, create a folder called `w` in `pix2pixHD/checkpoints/` and place the files there. The result structure should look like this:
+- Download the weights for the trained model (G and D nets) from our [Drive folder](https://drive.google.com/drive/folders/161S-NxOAmuIfHN-Ol2osE6sYp45fZHUK?usp=sharing). After download, create the following folder structure `pix2pixHD/checkpoints/w` and place the files inside `w`. The result structure should look like this:
 	```
 		pix2pixHD/
 			checkpoints/
@@ -52,4 +52,42 @@ __*Note:__ Even thought we tested and trained the network with a GPU of this cha
 	```
 - At this point the network should be installed!
 
-### Testing
+### Testing and Training
+
+In the folder `scripts` we provided useful scripts for performing this tasks. Copy the contents of this folder in the root directory `pix2pixHD/`.
+
+#### Testing
+
+We included a test [dataset](datasets/) `test_dataset.zip`, download this file and extract it inside the `pix2pixHD/datasets/` folder. To initiate the test, from the root folder, call the testing routine:
+```
+$ ./test.sh
+```
+The results will be stored in the `pix2pixHD/results` folder
+
+#### Training
+
+To train the net with your own dataset, create two folders inside `pix2pixHD/datasets/w/` called `train_A` and `train_B`. Inside the first folder the input images are placed and in the second folder, the expected result for the input images. Files names should correspond between folders i.e.
+```
+train_A/
+	0.png # A photo to extract a triamp from
+
+train_B/
+	0.png # The expected trimap
+```
+
+To start the training, call the following routine:
+```
+$ ./train.sh
+```
+
+#### Continue training
+
+The steps are basically the same that for training, placed the dataset in the corresponding folders. To continue training called the following routine:
+```
+$ ./continue_train.sh
+```
+
+**Note:** For default this routine will continue training from the last epoch that is provided in the Drive Folder (200th epoch).
+
+
+#### Evaluate your results

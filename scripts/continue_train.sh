@@ -1,1 +1,1 @@
-python3 train.py --name w --checkpoints_dir ./checkpoints --batchSize 2 --loadSize 256 --fineSize 128 --label_nc 0  --dataroot datasets/w/ --nThreads 8 --no_instance --save_latest_freq 200 --save_epoch_freq 10 --continue_train
+python3 train.py --name w --checkpoints_dir ./checkpoints --batchSize 1 --loadSize 256 --fineSize 128 --label_nc 0  --dataroot datasets/w/ --nThreads 8 --no_instance --save_latest_freq 200 --save_epoch_freq 10 --continue_train --which_epoch 200 --netG local
