@@ -65,6 +65,7 @@ $ ./test.sh
 The results will be stored in the `pix2pixHD/results` folder
 
 #### Training
+Due to being licensed, we cannot share the foreground dataset for our training. Please contact Brian Price  <bprice@adobe.com> if you are interested in getting the dataset.
 
 To train the net with your own dataset, create two folders inside `pix2pixHD/datasets/w/` called `train_A` and `train_B`. Inside the first folder the input images are placed and in the second folder, the expected result for the input images. Files names should correspond between folders i.e.
 ```
@@ -104,3 +105,7 @@ I/O | Image |
 Input | ![](upscaling/A1.png)
 Net trimap | ![](upscaling/A2.jpg)
 Upscaled | ![](upscaling/upscaled.png)
+
+## Authors
+- Mauricio Aravena Cifuentes (Wauro21)
+- Diego Badillo San Juan (Zimrahin)
