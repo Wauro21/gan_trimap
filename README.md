@@ -80,6 +80,8 @@ To start the training, call the following routine:
 $ ./train.sh
 ```
 
+**Note:** We provide a useful python script for expanding the dataset: [`moreData.py`](datasets/moreData.py)
+
 #### Continue training
 
 The steps are basically the same that for training, placed the dataset in the corresponding folders. To continue training called the following routine:
@@ -88,6 +90,3 @@ $ ./continue_train.sh
 ```
 
 **Note:** For default this routine will continue training from the last epoch that is provided in the Drive Folder (200th epoch).
-
-
-#### Evaluate your results
