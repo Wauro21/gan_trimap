@@ -28,5 +28,16 @@ Input | Output| Groundtruth|
 ![](test_results/natural/3_input_label.jpg)|![](test_results/natural/3_synthesized_image.jpg)| ![](test_results/natural/3.png)
 ![](test_results/natural/4_input_label.jpg)|![](test_results/natural/4_synthesized_image.jpg)| ![](test_results/natural/4.png)
 
+## Getting Started
+
 ### Prerequisites
- - 
+- Linux or macOS
+- Python 3.X
+- NVIDIA GPU[^1] (At least 4Gb of VRAM) + CUDA cuDNN
+
+**[^1]** Even thought we tested and trained the network with a GPU of this characteristics, the authors of the model recommend a more powerful option for improved results, at least a GPU with 11 Gb of VRAM.
+
+### Installation
+- Follow the **Installation instructions** from the [NVIDIA repository](https://github.com/NVIDIA/pix2pixHD#installation)
+
+- Search inside the cloned repository folder __pix2pixHD__, for the `train.py` file.
