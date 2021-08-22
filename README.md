@@ -40,4 +40,16 @@ __*Note:__ Even thought we tested and trained the network with a GPU of this cha
 ### Installation
 - Follow the **Installation instructions** from the [NVIDIA repository](https://github.com/NVIDIA/pix2pixHD#installation)
 
-- Search inside the cloned repository folder __pix2pixHD__, for the `train.py` file and replace it with the one found in this repository [here](train.py)
+- Search inside the cloned repository folder __pix2pixHD__, for the `train.py` file and replace it with the one found in this repository [here](train.py). This fixes some broken and old dependencies.
+
+- Download the weights for the trained model (G and D nets) from our [Drive folder](https://drive.google.com/drive/folders/161S-NxOAmuIfHN-Ol2osE6sYp45fZHUK?usp=sharing). After download, create a folder called `w` in `pix2pixHD/checkpoints/` and place the files there. The result structure should look like this:
+	```
+		pix2pixHD/
+			checkpoints/
+				w/
+					200_net_D.pth
+					200_net_G.pth
+	```
+- At this point the network should be installed!
+
+### Testing
